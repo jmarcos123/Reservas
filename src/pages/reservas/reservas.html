@@ -1,0 +1,72 @@
+<!--
+  Generated template for the ReservasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-row>
+      <ion-col col-10>
+        <ion-title style="margin-left:80px">
+          Apartamentos
+        </ion-title>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name='exit' style="font-size:30px; color:white" (click)="Sair()"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="cadastro.nome" required></ion-input>
+  </ion-item>
+
+  <ion-input-mask label="Data de Entrada" typeInput="text" typeLabel="floating" [(ngModel)]="cadastro.datae" mask="00/00/0000"></ion-input-mask>
+
+  <ion-input-mask label="Horario de Entrada" typeInput="text" typeLabel="floating" [(ngModel)]="cadastro.entrada" mask="00:00"></ion-input-mask>
+ 
+  <ion-input-mask label="Horario de Saida" typeInput="text" typeLabel="floating" [(ngModel)]="cadastro.saida" mask="00:00"></ion-input-mask>
+ 
+  <ion-input-mask label="Data de Saida" typeInput="text" typeLabel="floating" [(ngModel)]="cadastro.datas" mask="00/00/0000"></ion-input-mask>
+  
+  <ion-input-mask label="Numero do Cartão de Credito" typeInput="text" typeLabel="floating" [(ngModel)]="cadastro.num" mask="0000 0000 0000"></ion-input-mask>
+  
+    <ion-item>
+        <ion-label>Quarto:</ion-label>
+        <ion-select [(ngModel)]="cadastro.quarto">
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+          <ion-option value="17">17</ion-option>
+          <ion-option value="18">18</ion-option>
+          <ion-option value="19">19</ion-option>
+          <ion-option value="20">20</ion-option>
+        </ion-select>
+    </ion-item>
+        <button style="width:270px;margin:20px 0px 15px 15px" (click)="Enviar(cadastro)" ion-button color="danger" block>Enviar</button>
+    
+    <ion-row>
+        <ion-col col-12>
+            <a style="font-family: fantasy; color: black; margin-left:95px" (click)="pagMostrar()">Mostrar Reservas</a>
+        </ion-col>
+    </ion-row>
+    
+       
+</ion-content>
